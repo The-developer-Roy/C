@@ -142,7 +142,7 @@ int main()
         break;
     }
     }
-    printf("\n-----------------\n");
+    printf("\n------------------\n");
 
     return 0;
 }
