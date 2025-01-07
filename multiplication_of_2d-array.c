@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
@@ -11,53 +11,57 @@ int main()
 
     int arr1[m][n], arr2[m][n], arr3[m][n];
 
-    printf("Enter elements in matrix 1 below\n");
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            printf("Enter element %d%d: ", i, j);
+            printf("Enter element %d%d of array 1: ", i, j);
             scanf("%d", &arr1[i][j]);
         }
     }
 
-    printf("The entered elements of matrix 1 are shown below\n");
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            printf("Element %d%d = %d\n", i, j, arr1[i][j]);
-        }
-    }
-
-    printf("Enter elements in matrix 2 below\n");
-    for (int i = 0; i < m; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            printf("Enter element %d%d: ", i, j);
+            printf("Enter element %d%d of array 2: ", i, j);
             scanf("%d", &arr2[i][j]);
         }
     }
 
-    printf("The entered elements of matrix 2 are shown below\n");
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            printf("Element %d%d = %d\n", i, j, arr2[i][j]);
+            printf("The entered elements of array 1 are: \n");
+            printf("element %d%d = %d", i, j, arr1[i][j]);
         }
     }
 
-    printf("The sum of elements of matrix 1 and matrix 2 are shown below\n");
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            arr3[i][j] = arr1[i][j] + arr2[i][j];
-            printf("Element %d%d = %d\n", i, j, arr3[i][j]);
+            printf("The entered elements of array 2 are: \n");
+            printf("element %d%d = %d", i, j, arr2[i][j]);
         }
     }
-    
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            arr3[i][j] = arr1[i][j] * arr2[i][j];
+        }
+    }
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            printf("The mulitplied result of array 1 and array 2 is: %d\n", arr3[i][j]);
+        }
+    }
+
     return 0;
 }

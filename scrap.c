@@ -1,11 +1,21 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
+#include <stdio.h>
 
-int main(int argc, char const *argv[])
+int main()
 {
-    srand(time(0));
-    int random = (rand() % (9999999999 - 99999999 + 1)) + 99999999;
-    printf("%d", random);
-    return 0;
+    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    int m;
+
+    printf("Enter any number: ");
+    scanf("%d", &m);
+
+    for (int i = 0; i < 10; i++)
+    {
+        int p = arr[i] % m;
+        if (p == 0)
+        {
+
+            printf("%d\n", arr[i]);
+        }
+    }
 }
